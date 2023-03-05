@@ -1,0 +1,120 @@
+.presentacion {
+  padding: 30px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  column-gap: 30px;
+  row-gap: 30px;
+}
+.presentacion__left h1 {
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  animation: titulo__pulse 2s infinite, titulo__transladarX 0.3s ease-in-out;
+}
+.presentacion__left--name {
+  font-weight: 700;
+}
+@keyframes titulo__transladarX {
+  0% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.presentacion__left p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  animation: texto__opacity 0.3s ease-in-out;
+}
+@keyframes texto__opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.presentacion__left p:last-child {
+  margin-bottom: 0;
+}
+.presentacion__rigth {
+  height: fit-content;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  row-gap: 20px;
+}
+.presentacion__rigth a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  border-radius: 5px;
+  transition: var(--transition-3s);
+  animation: redes__rotar_3d 0.3s ease-in-out;
+}
+.presentacion__rigth a:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.presentacion__rigth a:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.presentacion__rigth a:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.presentacion__rigth a:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.presentacion__rigth a:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.presentacion__rigth a:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+@keyframes redes__rotar_3d {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+.presentacion__rigth a:hover {
+  transform: scale(1.1);
+}
+.presentacion__rigth a:nth-child(1) {
+  background: var(--fondo-2);
+}
+.presentacion__rigth a:nth-child(2) {
+  background: rgb(190, 0, 130);
+}
+.presentacion__rigth a:nth-child(3) {
+  background: #1877f2;
+}
+.presentacion__rigth a:nth-child(4) {
+  background: #0177b5;
+}
+.presentacion__rigth a img {
+  height: 50px;
+  min-width: 50px;
+}
+@media (max-width: 780px) {
+  .presentacion {
+    grid-template-columns: 1fr;
+  }
+  .presentacion__left h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .presentacion__left h1 {
+    font-size: 30px;
+  }
+}
