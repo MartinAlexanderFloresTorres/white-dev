@@ -6,7 +6,7 @@ const Instructores = () => {
   return (
     <div className='instructores'>
       <div className='grid-top'>
-        <h2 className='titulo'>Intructores</h2>
+        <h2 className='titulo'>Instructores</h2>
       </div>
 
       <div className='instructores-grid'>
