@@ -33,17 +33,12 @@ const ProyectoPage = () => {
         Volver
       </Link>
       <section className='proyecto__top'>
-        <div>
-          <a href={proyecto.imagen.secure_url} target='_blank' rel='noreferrer'>
-            <img src={proyecto.imagen.secure_url} alt='proyecto' />
+        <div className='proyecto__top--left'>
+          <h2>{proyecto.nombre}</h2>
+          <a className='proyecto__enlace' href={proyecto.web} target='_blank' rel='noreferrer'>
+            Visitar sitio web
+            <LinkSvg />
           </a>
-          <div>
-            <h2>{proyecto.nombre}</h2>
-            <a className='proyecto__enlace' href={proyecto.web} target='_blank' rel='noreferrer'>
-              Visitar sitio web
-              <LinkSvg />
-            </a>
-          </div>
         </div>
 
         <a href={proyecto.repositorio} target='_blank' rel='noreferrer' className='btn'>
@@ -71,7 +66,9 @@ const ProyectoPage = () => {
       </div>
 
       <div className='proyecto__contenido'>
-        <p className='proyecto__fecha'>Actualizado por ultima vez el {get_DMY(proyecto.updatedAt)}</p>
+        <p className='proyecto__fecha'>
+          Actualizado por ultima vez el {get_DMY(proyecto.updatedAt)}
+        </p>
         <div className='proyecto__trixEditor'>
           <TrixEditor value={proyecto.contenido} />
         </div>

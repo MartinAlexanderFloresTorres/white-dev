@@ -18,7 +18,12 @@ const useFiltros = () => {
   useEffect(() => {
     ;(async () => {
       try {
-        const { data } = await get_filtrar({ tecnologias: tecnologiasQ, query: queryQ, page: pageQ })
+        setLoadingProyectos(true)
+        const { data } = await get_filtrar({
+          tecnologias: tecnologiasQ,
+          query: queryQ,
+          page: pageQ
+        })
         setProyectos(data.docs)
         setTotalPages(data.totalPages)
       } catch (error) {

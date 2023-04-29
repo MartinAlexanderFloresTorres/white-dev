@@ -5,7 +5,10 @@ import useAdmin from '../hooks/useAdmin'
 import useFiltros from '../hooks/useFiltros'
 import Paginate from '../components/containers/paginate/Paginate'
 import CuyLoader from '../components/animations/CuyLoader'
+import Conocimientos from '../components/containers/conocimientos/Conocimientos'
+import Instructores from '../components/containers/Instructores/Instructores'
 import { ChevronRightSvg } from '../assets/svg'
+import DotLoader from '../components/animations/DotLoader'
 
 const HomePage = () => {
   // USE ADMIN
@@ -18,6 +21,10 @@ const HomePage = () => {
     <section className='container caja'>
       <Presentacion />
 
+      <Conocimientos />
+
+      <Instructores />
+
       <section className='container-grid'>
         <div className='grid-top'>
           <h2 className='titulo'>Proyectos</h2>
@@ -26,7 +33,15 @@ const HomePage = () => {
           </Link>
         </div>
 
-        <div className='grid-bottom'>{loadingProyectos ? <CuyLoader /> : proyectos.length > 0 ? proyectos.map((proyecto) => <Proyecto key={proyecto._id} proyecto={proyecto} />) : <div className='alerta alerta-info'>No hay proyectos</div>}</div>
+        <div className='grid-bottom'>
+          {loadingProyectos ? (
+            <DotLoader />
+          ) : proyectos.length > 0 ? (
+            proyectos.map((proyecto) => <Proyecto key={proyecto._id} proyecto={proyecto} />)
+          ) : (
+            <div className='alerta alerta-info'>No hay proyectos</div>
+          )}
+        </div>
 
         {proyectos.length > 0 && <Paginate />}
       </section>

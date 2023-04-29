@@ -40,6 +40,27 @@
 .presentacion__left p:last-child {
   margin-bottom: 0;
 }
+.presentacion__botones {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  row-gap: 10px;
+  flex-wrap: wrap;
+}
+.presentacion__cv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  border-radius: 5px;
+  background: var(--fondo-2);
+  color: var(--texto-2);
+  font-weight: 700;
+  transition: var(--transition-3s);
+  animation: cv__rotar_3d 0.3s ease-in-out;
+  border: 1px solid #444c50;
+  margin-bottom: 10px;
+}
 .presentacion__rigth {
   height: fit-content;
   display: grid;

@@ -17,11 +17,6 @@ const Proyecto = ({ proyecto, editar }) => {
           <div className='card-container'>
             <div className='card-info'>
               <h3 title={nombre}>{nombre}</h3>
-              <p>
-                {tecnologias.map((tecnologia) => (
-                  <span key={tecnologia._id}>#{tecnologia.nombre} </span>
-                ))}
-              </p>
             </div>
             <p className='card-descripcion' title={descripcion}>
               {descripcion}
@@ -30,7 +25,12 @@ const Proyecto = ({ proyecto, editar }) => {
             <div className='card-bottom'>
               <div className='card-tecnologias'>
                 {tecnologias.map((tecnologia) => (
-                  <img title={tecnologia?.nombre} key={tecnologia?._id} src={tecnologia?.imagen?.secure_url} alt='tecnologia' />
+                  <img
+                    title={tecnologia?.nombre}
+                    key={tecnologia?._id}
+                    src={tecnologia?.imagen?.secure_url}
+                    alt='tecnologia'
+                  />
                 ))}
               </div>
 
@@ -70,7 +70,12 @@ const Proyecto = ({ proyecto, editar }) => {
         <div className='card-bottom'>
           <div className='card-tecnologias'>
             {tecnologias.map((tecnologia) => (
-              <img title={tecnologia?.nombre} key={tecnologia?._id} src={tecnologia?.imagen?.secure_url} alt='tecnologia' />
+              <img
+                title={tecnologia?.nombre}
+                key={tecnologia?._id}
+                src={tecnologia?.imagen?.secure_url}
+                alt='tecnologia'
+              />
             ))}
           </div>
 

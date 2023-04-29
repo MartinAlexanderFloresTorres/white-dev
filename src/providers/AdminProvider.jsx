@@ -1,9 +1,8 @@
+import { useLocation } from 'react-router-dom'
 import { createContext, useEffect, useState } from 'react'
 import { get_mostrar } from '../services/api/tecnologias'
 import { get_obtener } from '../services/api/proyectos'
 import { get_show } from '../services/api/socials'
-import { useLocation } from 'react-router-dom'
-import useAutoLogin from '../hooks/useAutoLogin'
 
 export const AdminContext = createContext()
 
@@ -64,6 +63,11 @@ const AdminProvider = ({ children }) => {
     }
     setLoadingSocials(false)
   }
+
+  // USE EFFECTO PAGE TOP SCROLL
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
 
   // USEEFFECT
   useEffect(() => {

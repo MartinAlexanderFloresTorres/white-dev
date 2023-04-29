@@ -31,7 +31,9 @@
 }
 html {
   min-height: 100vh;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
+    Noto Color Emoji;
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
   color-scheme: dark;
@@ -230,7 +232,16 @@ main {
   margin-bottom: 20px;
 }
 .grid-top .btn {
-  padding: 10px 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.grid-top .btn svg {
+  width: 20px;
+  height: 20px;
 }
 @media (max-width: 300px) {
   .grid-top {
@@ -248,7 +259,13 @@ main {
   font-weight: 700;
   animation: titulo__pulse 2s infinite, titulo__transladar 0.3s ease-in-out;
   color: var(--secondary);
-  background-image: linear-gradient(258.75deg, rgb(67, 177, 200) 31.33%, rgb(153, 137, 235) 48.42%, rgb(217, 127, 209) 59.35%, rgb(245, 130, 178) 65.56%);
+  background-image: linear-gradient(
+    258.75deg,
+    rgb(67, 177, 200) 31.33%,
+    rgb(153, 137, 235) 48.42%,
+    rgb(217, 127, 209) 59.35%,
+    rgb(245, 130, 178) 65.56%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -293,11 +310,11 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
-  background: var(--gris);
+  background: var(--blue);
   color: var(--white);
-  padding: 5px 10px;
+  padding: 3px 8px;
   z-index: 1;
 }
 .card-flex svg {
@@ -308,7 +325,7 @@ main {
   height: 24px;
 }
 .card-imagen {
-  height: 200px;
+  height: 140px;
   object-fit: cover;
   transition: var(--transition-3s);
   width: 100%;
@@ -340,7 +357,6 @@ main {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  margin-bottom: 5px;
 }
 .card-info p {
   font-size: 14px;
@@ -392,11 +408,11 @@ main {
   background: var(--gris);
 }
 .card-fecha {
-  font-size: 1rem;
+  font-size: 12px;
   font-weight: 400;
   color: var(--sub-titulo);
   background: var(--gris);
-  padding: 5px 10px;
+  padding: 4px 8px;
   border-radius: 5px;
 }
 /*=============== card-redes ===============*/
@@ -516,6 +532,8 @@ main {
   row-gap: 30px;
 }
 .asidebar-aside {
+  position: sticky;
+  top: 98px;
   max-height: calc(100vmin - 100px);
   overflow: auto;
   padding-right: 10px;
@@ -570,6 +588,9 @@ main {
 @media (max-width: 768px) {
   .asidebar {
     display: block;
+  }
+  .asidebar-aside {
+    position: static;
   }
   .asidebar-aside__tecnologias {
     width: 100%;
@@ -1166,7 +1187,9 @@ trix-editor {
 
 .spoke {
   animation: spoke var(--dur) linear infinite;
-  background: radial-gradient(100% 100% at center, hsl(0, 0%, 60%) 4.8%, hsla(0, 0%, 60%, 0) 5%), linear-gradient(hsla(0, 0%, 55%, 0) 46.9%, hsl(0, 0%, 65%) 47% 52.9%, hsla(0, 0%, 65%, 0) 53%) 50% 50% / 99% 99% no-repeat;
+  background: radial-gradient(100% 100% at center, hsl(0, 0%, 60%) 4.8%, hsla(0, 0%, 60%, 0) 5%),
+    linear-gradient(hsla(0, 0%, 55%, 0) 46.9%, hsl(0, 0%, 65%) 47% 52.9%, hsla(0, 0%, 65%, 0) 53%)
+      50% 50% / 99% 99% no-repeat;
 }
 
 /* Animations */
