@@ -4,7 +4,7 @@ const Presentacion = () => {
   return (
     <section className='presentacion'>
       <div className='presentacion__left'>
-        <h1 className='titulo'>whitecode.dev</h1>
+        <h1 className='titulo'>MARTIN DEV</h1>
 
         <p>
           ¡Hola! Soy{' '}
